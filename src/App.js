@@ -55,7 +55,14 @@ function App() {
           Current Balance: <strong>10 ETH</strong>
         </div>
         <button className='button is-primary is-large is-focused mr-5'>Donate</button>
-        <button className='button is-primary is-large is-focused is-danger'>Withdraw</button>
+        <button className='button is-primary is-large is-focused is-danger mr-5'>Withdraw</button>
+        <button className="button is-link is-large"
+          onClick={() =>
+            web3Api.provider.request({ method: "eth_requestAccounts" })
+          }
+        >
+          Connect Wallets
+        </button>
         <span>
           <p>
             <strong>Accounts Address: </strong>
